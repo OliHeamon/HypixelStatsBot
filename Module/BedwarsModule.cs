@@ -19,6 +19,8 @@ namespace HypixelStatsBot.Module
         public BedwarsModule(IServiceProvider services) 
         {
             database = services.GetRequiredService<PlayerStorage>();
+
+            Console.WriteLine("DB Entry Count: " + database.AccountData.Count());
         }
 
         [Command("addentry")]
