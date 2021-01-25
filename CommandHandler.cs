@@ -1,5 +1,8 @@
 ﻿using Discord.Commands;
 using Discord.WebSocket;
+using HypixelStatsBot.Constant;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -9,18 +12,21 @@ namespace HypixelStatsBot
     {
         private readonly DiscordSocketClient client;
         private readonly CommandService commands;
+        private readonly IServiceProvider services;
 
-        public CommandHandler(DiscordSocketClient client, CommandService commands)
+        public CommandHandler(IServiceProvider services)
         {
-            this.commands = commands;
-            this.client = client;
+            this.services = services;
+
+            commands = services.GetRequiredService<CommandService>();
+            client = services.GetRequiredService<DiscordSocketClient>();
         }
 
         public async Task InstallCommandsAsync()
         {
             client.MessageReceived += HandleCommandAsync;
 
-            await commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), services: null);
+            await commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), services: services);
         }
 
         private async Task HandleCommandAsync(SocketMessage messageParam)
@@ -39,7 +45,7 @@ namespace HypixelStatsBot
 
             SocketCommandContext context = new SocketCommandContext(client, message);
 
-            await commands.ExecuteAsync(context: context, argPos: argPos, services: null);
+            await commands.ExecuteAsync(context: context, argPos: argPos, services: services);
         }
     }
 }

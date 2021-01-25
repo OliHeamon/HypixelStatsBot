@@ -1,4 +1,4 @@
-﻿namespace HypixelStatsBot
+﻿namespace HypixelStatsBot.Constant
 {
     public static partial class Constants
     {
