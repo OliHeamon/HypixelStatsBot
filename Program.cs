@@ -11,16 +11,9 @@ namespace HypixelStatsBot
 {
     public class Program
     {
-        public static void Main(string[] args) 
+        public static void Main(string[] args)
         {
-            try
-            { 
-                new Program().MainAsync().GetAwaiter().GetResult(); 
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.StackTrace);
-            }
+            new Program().MainAsync().GetAwaiter().GetResult();
         }
 
         private DiscordSocketClient client;
