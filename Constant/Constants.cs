@@ -5,9 +5,9 @@ namespace HypixelStatsBot.Constant
 {
     public static partial class Constants
     {
-        public static readonly string DiscordAPIKey = "ODAyOTEyMjU3NDI3MjQzMDA4.YA2ITw.IiEEiKuc6rsRIj-zWEx5CTPj7vE";// Environment.GetEnvironmentVariable("DISCORD_BOT_KEY");
+        public static readonly string DiscordAPIKey = Environment.GetEnvironmentVariable("DISCORD_BOT_KEY");
 
-        public static readonly string HypixelAPIKey = "be62d681-7717-4760-9104-6c2d24da0305"; //Environment.GetEnvironmentVariable("HYPIXEL_API_KEY");
+        public static readonly string HypixelAPIKey = Environment.GetEnvironmentVariable("HYPIXEL_API_KEY");
 
         public const char Prefix = '!';
 
