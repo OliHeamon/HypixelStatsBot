@@ -165,7 +165,7 @@ namespace HypixelStatsBot
             return newText.ToString();
         }
 
-        public static async Task<string> DiscordIDFromIGN(List<AccountData> accountData, string ign)
+        public static string DiscordIDFromIGN(List<AccountData> accountData, string ign)
             => accountData.FirstOrDefault(data => data.IGN == ign).DiscordID;
     }
 }

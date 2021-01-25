@@ -59,4 +59,3 @@ C:\Users\olive\Documents\Programming\CS\HypixelStatsBot\HypixelStatsBot\bin\Debu
 C:\Users\olive\Documents\Programming\CS\HypixelStatsBot\HypixelStatsBot\obj\Debug\netcoreapp3.1\HypixelStatsBot.csproj.CoreCompileInputs.cache
 C:\Users\olive\Documents\Programming\CS\HypixelStatsBot\HypixelStatsBot\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\olive\Documents\Programming\CS\HypixelStatsBot\HypixelStatsBot\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\olive\Documents\Programming\CS\HypixelStatsBot\HypixelStatsBot\obj\Debug\netcoreapp3.1\HypixelStatsBot.csprojAssemblyReference.cache

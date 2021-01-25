@@ -198,7 +198,7 @@ namespace HypixelStatsBot.Module
             {
                 PlayerData playerData = sortedList[i];
 
-                string id = await Utils.DiscordIDFromIGN(accountData, playerData.ign);
+                string id = Utils.DiscordIDFromIGN(accountData, playerData.ign);
 
                 IUser user = await UserFromID(id);
 
